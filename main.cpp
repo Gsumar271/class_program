@@ -2,7 +2,7 @@
 //  main.cpp
 //  irvine class
 //
-//  Created by Eugene Sumaryev on 2/6/19.
+//  Created by Eugene Sumaryev on 2/16/19.
 //  Copyright © 2019 com.eugene All rights reserved.
 //
 
@@ -85,15 +85,11 @@ void evaluate_expr(string& expr){
     if(!numbers.empty())
         result = numbers.pop();
     
-    //if any extra operands or operators are left
+    //if any extra operands are left
     //throw exception
     try {
-        if(!numbers.empty()){
-           // if(isdigit(numbers.pop()))
+        if(!numbers.empty())
                 throw "Error too many operands";
-         //   else
-            //    throw "Error too many operators";
-        }
     }
     catch (const char* msg) {
         cerr << msg << endl;
